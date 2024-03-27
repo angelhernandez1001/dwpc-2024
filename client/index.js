@@ -24,3 +24,4 @@ let show = (msg="No message given") => {
   }
   
   asyncCall();
+  show();
