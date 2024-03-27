@@ -1,9 +1,11 @@
-import express  from 'express';
+import express from 'express';
+
 const router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+// eslint-disable-next-line no-unused-vars
+router.get('/', (req, res, next) => {
   res.render('index', { title: 'Express with babel' });
 });
 
-export default  router;
+export default router;
