@@ -15,6 +15,8 @@ import webpackConfig from '../webpack.dev.config';
 
 import log from './config/winston';
 
+import configTemplateEngine from './config/templateEngine';
+
 const app = express();
 
 // Obteniendo el modo de ejecucion de la app
@@ -47,8 +49,8 @@ if (nodeEviroment === 'developement') {
   console.log('Ejecutando en modo de produccion');
 }
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+// view egnime setup
+configTemplateEngine(app);
 
 app.use(morgan('dev', { stream: log.stream }));
 app.use(express.json());
