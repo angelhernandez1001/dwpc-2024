@@ -1,0 +1,10 @@
+#brand-logo-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#brand-logo-img img{
+    margin-right: 10px;
+}
