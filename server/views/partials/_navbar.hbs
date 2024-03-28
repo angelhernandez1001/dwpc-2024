@@ -1,3 +1,55 @@
+ <!-- Dropdown para menu "Proyectos"-->
+ <ul id="dropdownMenu" class="dropdown-content">
+    <li>
+        <a href="/project">
+        <i 
+          class="large material-icons" 
+        style="margin: 2px;">
+        list
+        </i>
+        Listar Proyectos
+        </a>
+    </li>
+      <li>
+        <a href="/project/add">
+        <i class="large material-icons" 
+        style="margin: 2px;">
+        add_box
+        </i>
+        Crear Proyectos
+     </a>
+    </li>
+ </ul>
+ <!-- Dropdown para menu "Usuarios"-->
+ <ul id="user-dropdown-menu" class="dropdown-content">
+    <li>
+        <a href="/user/login">
+        <i class="large material-icons" style="margin: 2px;">
+            login
+        </i>
+        Ingresar
+        </a>
+    </li>
+     <li class="divider">
+        <li>
+        <a href="/user/register">
+        <i class="large material-icons" style="margin: 2px;">
+            person_add
+        </i>
+        Registrarse
+        </a>
+    </li>
+     <li>
+        <a href="/user/logout">
+        <i class="large material-icons" 
+        style="margin: 2px;">
+            logout
+        </i>
+        Cerrar sesion
+        </a>
+    </li>
+ </ul>
+
  <nav class="teal darken-1">
     <div class="container">
         <div class="nav-wrapper">
@@ -21,13 +73,80 @@
                 <i class="material-icons right">business</i>
                 Acerca De...</a>
             </li>
+        <!-- proyetos menu despegable -->
+        <li>
+            <a class="dropdown-trigger" 
+            data-target="dropdownMenu" 
+            href="#!">Acciones
+            <i class="material-icons right">
+                arrow_drop_down
+            </i>
+            </a>
+        </li>  
+        <!-- proyetos menu despegable usuarios-->
+        <li>
+            <a 
+            class="dropdown-trigger" 
+            data-target="user-dropdown-menu"
+             href="#!">
+             Usuario
+             <i class="material-icons right">
+                people
+            </i>
+            </a>
+        </li>
         </ul>
+        <!--barra de navegacion movil -->
         <a href="#" data-target="slide-out" class="sidenav-trigger">
             <i class="material-icons">menu</i>         
         </a>
         <ul id="slide-out" class="sidenav">
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/about">Acerca De ...</a></li>
+            <li>
+                <a href="/">
+                <i class="large material-icons left">
+                    home </i>
+                Inicio</a>
+            </li>
+            <li class="divider"></li>
+              <li>
+                <a href="/projects">
+                <i class="large material-icons left">
+                    list </i>
+                Listar Proyectos
+                </a>
+            </li>
+            <li>
+                <li>
+                <a href="/projects/add">
+                <i class="large material-icons left">
+                    add_box </i>
+                Crear Proyecto</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <li>
+                <a href="/user/login">
+                <i class="large material-icons left">
+                    login </i>
+                Ingresar</a>
+            </li>
+            <li>
+                <a href="/user/register">
+                <i class="large material-icons left">
+                    person_add </i>
+                Registrarse
+                </a>
+            </li>
+            <li>
+                <a href="/user/logout">
+                <i class="large material-icons left">
+                    logout </i>
+                Cerrar Sesión</a>
+            </li>
+           <li class="divider"></li>
+            <li>
+                    <a href="/about">Acerca De ...</a>
+            </li>
         </ul>
         </div>
     </div>
