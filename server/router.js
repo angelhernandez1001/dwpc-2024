@@ -12,12 +12,11 @@ import projectRouter from './domains/project/project.router';
 const addRoutes = (app) => {
   // Agregando las rutas Home
   app.use('/', homeRouter);
-   // Agregar el enrutado de user
-   app.use('/user', userRouter);   
-   // Agregado el enrutado de project
-   app.use('/project', projectRouter);
-  
-   // 🚨Errores
+  // Agregar el enrutado de user
+  app.use('/user', userRouter);
+  // Agregado el enrutado de project
+  app.use('/project', projectRouter);
+  // 🚨Errores
   // catch 404 and forward to error handler
   app.use((req, res, next) => {
     log.info(`404 Pagina no encontrada 😒 ${req.originalUrl}`);
