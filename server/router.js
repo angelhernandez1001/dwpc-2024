@@ -16,6 +16,7 @@ const addRoutes = (app) => {
   app.use('/user', userRouter);
   // Agregado el enrutado de project
   app.use('/project', projectRouter);
+
   // 🚨Errores
   // catch 404 and forward to error handler
   app.use((req, res, next) => {
