@@ -3,12 +3,21 @@ import createError from 'http-errors';
 import log from './config/winston';
 // Importando el enrutador Home
 import homeRouter from './domains/home/home.router';
+// Importando enrutador user
+import userRouter from './domains/user/user.router';
+// Imporntado enrutador project
+import projectRouter from './domains/project/project.router';
 
 // Funcion que agrega las rutas
 const addRoutes = (app) => {
   // Agregando las rutas Home
   app.use('/', homeRouter);
-  // 🚨Errores
+   // Agregar el enrutado de user
+   app.use('/user', userRouter);   
+   // Agregado el enrutado de project
+   app.use('/project', projectRouter);
+  
+   // 🚨Errores
   // catch 404 and forward to error handler
   app.use((req, res, next) => {
     log.info(`404 Pagina no encontrada 😒 ${req.originalUrl}`);

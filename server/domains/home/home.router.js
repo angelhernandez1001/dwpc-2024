@@ -14,5 +14,8 @@ const router = new Router();
 // Get "/home"
 router.get(['/', '/home', '/index'], homeController.home);
 
+// GET '/about
+router.get('/about', homeController.about);
+
 // Exportando el router
 export default router;
